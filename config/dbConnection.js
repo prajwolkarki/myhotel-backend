@@ -1,10 +1,11 @@
 
 const mongoose = require('mongoose');
+const dotenv = require('dotenv').config();
+// const mongoURL = 'mongodb://localhost:27017/hotels';
+const mongoURL_Remote = process.env.CONNECTION_STRING;
 
-const mongoURL = 'mongodb://localhost:27017/hotels';
 
-
-mongoose.connect(mongoURL);
+mongoose.connect(mongoURL_Remote);
 
 
 const db = mongoose.connection;
@@ -12,7 +13,7 @@ const db = mongoose.connection;
 db.on('connected',()=>{
     console.log("Connected to database ");
 });
-db.on('error',(e)=>{
+db.on('error',(err)=>{
     console.log("Mongoose connection error ",err);
 });
 db.on('disconnected',()=>{
