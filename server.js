@@ -18,8 +18,10 @@ app.use(passport.initialize());
 app.get("/", (req, res) => {
   res.send("Welcome to the Hotel!!!");
 });
-app.use("/person", personRoutes);
-app.use("/menu",localMiddleware, menuItemRoutes);
+
+
+app.use("/person",localMiddleware, personRoutes);
+app.use("/menu", menuItemRoutes);
 // router.use(ageFilter);
 // app.use('/',router);
 
