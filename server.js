@@ -7,7 +7,6 @@ const ageFilter = require("./middleware/ageFilter");
 const logRequest = require("./middleware/logRequest");
 const passport = require('./middleware/auth');
 const app = express();
-// const router = express.Router();
 const personRoutes = require("./routes/personRoutes");
 const menuItemRoutes = require("./routes/menuItemRoutes");
 const localMiddleware = passport.authenticate("local", { session: false });
@@ -20,7 +19,7 @@ app.get("/", (req, res) => {
 });
 
 
-app.use("/person",localMiddleware, personRoutes);
+app.use("/person", personRoutes);
 app.use("/menu", menuItemRoutes);
 // router.use(ageFilter);
 // app.use('/',router);
