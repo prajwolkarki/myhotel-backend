@@ -10,14 +10,16 @@ passport.use(
         if (!user) {
           return done(null, false, { message: "Incorrect username" });
         }
-        const isPasswordMatch = user.password === PASSWORD ? true : false;
+        console.log(user.password)
+        //const isPasswordMatch = user.password === PASSWORD ? true : false;
+        const isPasswordMatch =await user.comparePassword(PASSWORD);
         if (isPasswordMatch) {
           return done(null, user);
         } else {
           return done(null, false, { message: "Incorrect password" });
         }
       } catch (error) {
-        return done(err);
+        return done(error);
       }
     })
   );
