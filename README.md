@@ -68,7 +68,7 @@ Project Structure
 
 
 
-myhotel-backend/
+myhotel-backend/    <br/>      
 ├── config/      <br/>       
 ├── middleware/      <br/>            
 ├── models/               <br/>      
