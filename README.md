@@ -66,17 +66,17 @@ npm start
 The server will start and listen on the port defined in the .env file (default is 3000).
 Project Structure
 
-csharp
+
 
 myhotel-backend/
-├── config/             # Configuration files
-├── middleware/         # Custom middleware
-├── models/             # Mongoose models
-├── routes/             # Express routes
-├── .gitignore          # Git ignore file
-├── package-lock.json   # npm lock file
-├── package.json        # npm configuration file
-├── server.js           # Entry point of the application
+├── config/      <br/>       
+├── middleware/      <br/>            
+├── models/               <br/>      
+├── routes/                <br/>      
+├── .gitignore             <br/>      
+├── package-lock.json     <br/>      
+├── package.json       <br/>      
+├── server.js            <br/>        
 
     config/: Contains configuration files for the application.
     middleware/: Contains custom middleware for request handling.
